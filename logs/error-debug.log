@@ -1,0 +1,8 @@
+[2026-11-18T14:12:09.412Z] ERROR [GET /api/tasks/invalid-id-999] Non-numeric ID evaluated to NaN during Number(req.params.id) lookup (backend/server.js:49).
+[2026-11-18T14:25:41.108Z] FIX APPLIED: Verified strict ID matching returning structured 404 JSON response { success: false, message: 'Task not found' }.
+
+[2026-11-18T15:03:17.884Z] WARN [Frontend app.js] Duplicate PUT /api/tasks/3 detected (3 identical requests within 12ms on rapid status toggle).
+[2026-11-18T15:19:02.550Z] FIX APPLIED: Refactored task list click handler to single delegated listener in DOMContentLoaded -> Verified 1 request per click.
+
+[2026-11-18T16:40:11.203Z] PERF [GET /api/tasks?status=Pending] Unindexed query scan time: 148ms across 1,000 seeded records.
+[2026-11-18T16:55:49.910Z] OPT APPLIED: Added compound index { status: 1, createdAt: -1 } in backend/models/Task.js -> Execution time reduced to 14ms.

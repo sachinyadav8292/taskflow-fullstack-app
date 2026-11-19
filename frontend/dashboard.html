@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">TaskFlow</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="stats-bar">
+      <div class="stat-box">Total Tasks: <span id="total-count">0</span></div>
+      <div class="stat-box">Pending: <span id="pending-count">0</span></div>
+      <div class="stat-box">Completed: <span id="completed-count">0</span></div>
+    </div>
+
+    <div class="task-form-card">
+      <h3>Add New Task</h3>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Enter task title..." required>
+        <input type="text" id="task-desc" placeholder="Short description..." required>
+        <select id="task-priority">
+          <option value="High">High Priority</option>
+          <option value="Medium" selected>Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+        <input type="date" id="task-date" required>
+        <button type="submit" class="btn-primary">+ Add Task</button>
+      </form>
+    </div>
+
+    <div class="filter-bar">
+      <h3>Your Tasks</h3>
+      <select id="filter-status">
+        <option value="All">All Tasks</option>
+        <option value="Pending">Pending</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+
+    <div id="task-list" class="task-list"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

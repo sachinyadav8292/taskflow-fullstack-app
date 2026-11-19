@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Task Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">TaskFlow</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
+    <div class="detail-card">
+      <h2>Edit Task Details</h2>
+      <form id="edit-form">
+        <label>Task Title</label>
+        <input type="text" id="edit-title" required>
+
+        <label>Description</label>
+        <textarea id="edit-desc" rows="4" required></textarea>
+
+        <label>Priority</label>
+        <select id="edit-priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <label>Status</label>
+        <select id="edit-status">
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <label>Due Date</label>
+        <input type="date" id="edit-date" required>
+
+        <div class="btn-group">
+          <button type="submit" class="btn-primary">Save Changes</button>
+          <button type="button" id="delete-btn" class="btn-danger">Delete Task</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
